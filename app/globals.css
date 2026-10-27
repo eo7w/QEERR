@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #121214;
+  --color-surface: #1c1c20;
+  --color-surface-2: #27272c;
+  --color-line: #303036;
+  --color-muted: #8d8d96;
+  --color-up: #1fb35b;
+  --color-down: #e5453b;
+  --color-accent: #3b82f6;
+  --color-warn: #f59e0b;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: #fff;
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.animate-sheet {
+  animation: sheet-up 220ms ease-out;
+}
